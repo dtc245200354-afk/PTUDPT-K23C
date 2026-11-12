@@ -1,0 +1,34 @@
+
+@baseUrl = http://localhost:5100
+
+### 1. Kiem tra API
+GET {{baseUrl}}/
+
+### 2. Lay danh sach san pham
+GET {{baseUrl}}/api/products
+
+### 3. Lay san pham ID 1
+GET {{baseUrl}}/api/products/1
+
+### 4. Lay san pham khong ton tai
+GET {{baseUrl}}/api/products/999
+
+### 5. Tao san pham moi
+POST {{baseUrl}}/api/products
+Content-Type: application/json
+
+{
+    "name": "Lap trinh gRPC",
+    "description": "Tai lieu hoc gRPC",
+    "price": 180000
+}
+
+### 6. Tao san pham sai
+POST {{baseUrl}}/api/products
+Content-Type: application/json
+
+{
+    "name": "",
+    "description": "Test",
+    "price": 0
+}
